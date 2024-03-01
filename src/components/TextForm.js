@@ -118,7 +118,7 @@ export default function TextForm(props) {
         <p>
           {text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters
         </p>
-        <p>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} Minutes Read</p> my-1
+        <p>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} Minutes Read</p>
         <h2>Preview</h2>
         <p>
           {text.length > 0
