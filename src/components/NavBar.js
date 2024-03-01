@@ -55,17 +55,6 @@ export default function Navbar(props) {
               Enable DarkMode
             </label>
           </div>
-          {/* <form className="d-flex" role="search">
-            <input
-              className="form-control me-2"
-              type="search"
-              placeholder="Search"
-              aria-label="Search"
-            />
-            <button className="btn btn-danger" type="submit">
-              Search
-            </button>
-          </form> */}
         </div>
       </div>
     </nav>
