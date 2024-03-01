@@ -43,7 +43,7 @@ function App() {
         <Alert alert={alert} />
         <div className="container my-3">
           <Routes>
-            <Route exact path="/about" element={<About />}></Route>
+            <Route exact path="/about" element={<About mode={mode} />}></Route>
             <Route
               exact
               path="/"

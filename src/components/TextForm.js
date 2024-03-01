@@ -88,25 +88,25 @@ export default function TextForm(props) {
             rows="8"
           ></textarea>
         </div>
-        <button className="btn btn-primary mx-2" onClick={UpperCaseClick}>
+        <button className="btn btn-primary mx-2 my-1" onClick={UpperCaseClick}>
           Convert to uppercase
         </button>
-        <button className="btn btn-primary mx-2" onClick={LowerCaseClick}>
+        <button className="btn btn-primary mx-2 my-1" onClick={LowerCaseClick}>
           Convert to lowercase
         </button>
-        <button className="btn btn-primary mx-2" onClick={CapitalizedCaseClick}>
+        <button className="btn btn-primary mx-2 my-1" onClick={CapitalizedCaseClick}>
           Convert to Capitalized
         </button>
-        <button className="btn btn-primary mx-2" onClick={InvertCaseClick}>
+        <button className="btn btn-primary mx-2 my-1" onClick={InvertCaseClick}>
           Invert Case
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleCopy}>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleCopy}>
           Copy Text
         </button>
-        <button className="btn btn-primary mx-2" onClick={handleExtraSpaces}>
+        <button className="btn btn-primary mx-2 my-1" onClick={handleExtraSpaces}>
           Remove Extra Space
         </button>
-        <button className="btn btn-primary mx-2" onClick={ClearClick}>
+        <button className="btn btn-primary mx-2 my-1" onClick={ClearClick}>
           Clear
         </button>
       </div>
@@ -116,9 +116,9 @@ export default function TextForm(props) {
       >
         <h2>Your text summary</h2>
         <p>
-          {text.split(" ").length} words and {text.length} characters
+          {text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters
         </p>
-        <p>{0.008 * text.split(" ").length} Minutes Read</p>
+        <p>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} Minutes Read</p> my-1
         <h2>Preview</h2>
         <p>
           {text.length > 0
