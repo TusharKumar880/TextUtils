@@ -88,25 +88,53 @@ export default function TextForm(props) {
             rows="8"
           ></textarea>
         </div>
-        <button className="btn btn-primary mx-2 my-1" onClick={UpperCaseClick}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-primary mx-2 my-1"
+          onClick={UpperCaseClick}
+        >
           Convert to uppercase
         </button>
-        <button className="btn btn-primary mx-2 my-1" onClick={LowerCaseClick}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-primary mx-2 my-1"
+          onClick={LowerCaseClick}
+        >
           Convert to lowercase
         </button>
-        <button className="btn btn-primary mx-2 my-1" onClick={CapitalizedCaseClick}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-primary mx-2 my-1"
+          onClick={CapitalizedCaseClick}
+        >
           Convert to Capitalized
         </button>
-        <button className="btn btn-primary mx-2 my-1" onClick={InvertCaseClick}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-primary mx-2 my-1"
+          onClick={InvertCaseClick}
+        >
           Invert Case
         </button>
-        <button className="btn btn-primary mx-2 my-1" onClick={handleCopy}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-primary mx-2 my-1"
+          onClick={handleCopy}
+        >
           Copy Text
         </button>
-        <button className="btn btn-primary mx-2 my-1" onClick={handleExtraSpaces}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-primary mx-2 my-1"
+          onClick={handleExtraSpaces}
+        >
           Remove Extra Space
         </button>
-        <button className="btn btn-primary mx-2 my-1" onClick={ClearClick}>
+        <button
+          disabled={text.length === 0}
+          className="btn btn-primary mx-2 my-1"
+          onClick={ClearClick}
+        >
           Clear
         </button>
       </div>
@@ -116,9 +144,20 @@ export default function TextForm(props) {
       >
         <h2>Your text summary</h2>
         <p>
-          {text.split(" ").filter((element)=>{return element.length!==0}).length} words and {text.length} characters
+          {
+            text.split(" ").filter((element) => {
+              return element.length !== 0;
+            }).length
+          }{" "}
+          words and {text.length} characters
         </p>
-        <p>{0.008 * text.split(" ").filter((element)=>{return element.length!==0}).length} Minutes Read</p>
+        <p>
+          {0.008 *
+            text.split(" ").filter((element) => {
+              return element.length !== 0;
+            }).length}{" "}
+          Minutes Read
+        </p>
         <h2>Preview</h2>
         <p>
           {text.length > 0
