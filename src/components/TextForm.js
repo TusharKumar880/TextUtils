@@ -162,7 +162,7 @@ export default function TextForm(props) {
         <p>
           {text.length > 0
             ? text
-            : "Enter something in the textbox above to preview it here"}
+            : "Nothing to preview !!!"}
         </p>
       </div>
     </>
